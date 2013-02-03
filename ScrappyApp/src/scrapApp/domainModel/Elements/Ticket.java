@@ -1,5 +1,6 @@
 package scrapApp.domainModel.Elements;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import scrapApp.domainModel.Tag.Tag;
@@ -12,7 +13,7 @@ public class Ticket extends Item {
 	
 	public Ticket(int id, String name, String description, Date dateAdded,
 			Date dateObtained, ItemType itemType,
-			int[] relatedItemsIDs, TicketType ticketType, Tag[] tags) 
+			ArrayList<Integer> relatedItemsIDs, TicketType ticketType, Tag[] tags) 
 	{
 		super(id, name, description, dateAdded, dateObtained, 
 				itemType, relatedItemsIDs, tags);
