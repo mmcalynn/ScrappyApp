@@ -1,6 +1,7 @@
 package scrapApp.domainModel.Elements;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import scrapApp.domainModel.Builders.SetMethodResultBuilder;
@@ -25,8 +26,8 @@ public class Clothing extends Item {
 	
 	private ClothingType _clothingType;
 
-	public Clothing(int id, String name, String description, Date dateAdded,
-			Date dateObtained, ItemType itemType, ArrayList<Integer> relatedItemsIDs,
+	public Clothing(int id, String name, String description, Calendar dateAdded,
+			Calendar dateObtained, ItemType itemType, ArrayList<Integer> relatedItemsIDs,
 			Tag[] tags, ClothingType clothingType) {
 		super(id, name, description, dateAdded, dateObtained, itemType,
 				relatedItemsIDs, tags);

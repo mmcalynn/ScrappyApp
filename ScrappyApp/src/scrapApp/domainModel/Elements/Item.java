@@ -2,6 +2,7 @@ package scrapApp.domainModel.Elements;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Set;
 
@@ -12,18 +13,18 @@ import scrapApp.domainModel.utilities.SetMethodResult;
 import scrapApp.domainModel.utilities.SetMethodResult.ErrorType;
 
 public class Item {
-	//an ID of -1 indicates a newly created item that has not been saved
+	//an ID of null indicates a newly created item that has not been saved
 	private Integer _id;
 	private String _name;
 	private String _description;
-	private Date _dateAdded;
-	private Date _dateObtained;
+	private Calendar _dateAdded;
+	private Calendar _dateObtained;
 	private ItemType _itemType;
 	private ArrayList<Integer> _relatedItemsIDs;
 	private Tag[] _tags;
 	
 	public Item(Integer id, String name, String description,
-			Date dateAdded, Date dateObtained, ItemType itemType,
+			Calendar dateAdded, Calendar dateObtained, ItemType itemType,
 			ArrayList<Integer> relatedItemsIDs, Tag[] tags)
 	{
 		_id = id;
@@ -52,12 +53,12 @@ public class Item {
 		return this._description;
 	}
 	
-	public Date DateAdded()
+	public Calendar DateAdded()
 	{
 		return this._dateAdded;
 	}
 	
-	public Date DateObtained()
+	public Calendar DateObtained()
 	{
 		return this._dateObtained;
 	}
@@ -97,13 +98,13 @@ public class Item {
 		return SetMethodResultBuilder.CreateSuccess(null);
 	}
 	
-	public SetMethodResult DateAdded(Date dateAdded)
+	public SetMethodResult DateAdded(Calendar dateAdded)
 	{
 		this._dateAdded = dateAdded;
 		return SetMethodResultBuilder.CreateSuccess(null);
 	}
 	
-	public SetMethodResult DateObtained(Date dateObtained)
+	public SetMethodResult DateObtained(Calendar dateObtained)
 	{
 		this._dateObtained = dateObtained;
 		return SetMethodResultBuilder.CreateSuccess(null);
